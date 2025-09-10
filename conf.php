@@ -13,3 +13,11 @@ $conf['db_name'] = 'nol';
 
 // Site Language
 $conf['site_lang'] = 'en';
+
+// Email Configuration
+$conf['mail_type'] = 'smtp';
+$conf['smtp_host'] = 'smtp.gmail.com';
+$conf['smtp_user'] = 'abwoganatalie@gmail.com';
+$conf['smtp_pass'] = 'hebp rzqo zrpz ktmq'; // Use an App Password for Gmail
+$conf['smtp_port'] = 465;
+$conf['smtp_secure'] = 'ssl'; // or 'tls'
