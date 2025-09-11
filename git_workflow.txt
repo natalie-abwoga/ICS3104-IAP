@@ -1,0 +1,24 @@
+# Git Workflow for ICS3104 Project
+
+1. Initialize repository (only once):
+   git init
+
+2. Check the status of files:
+   git status
+
+3. Add files to staging:
+   git add .
+
+4. Commit changes with a meaningful message:
+   git commit -m "Added signup, email, and user listing features"
+
+5. Link to remote repository (only once):
+   git remote add origin https://github.com/natalie-abwoga/ICS3104-IAP.git
+
+6. Push changes to remote repository:
+   git push -u origin main
+
+7. For future updates:
+   git add .
+   git commit -m "Your commit message"
+   git push
