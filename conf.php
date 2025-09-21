@@ -18,9 +18,9 @@ $conf['site_lang'] = 'en';
 $conf['mail_type']   = 'smtp';
 $conf['smtp_host']   = 'smtp.gmail.com';
 $conf['smtp_user']   = 'abwoganatalie@gmail.com';
-$conf['smtp_pass']   = 'hebp rzqo zrpz ktmq'; // Gmail App Password
+$conf['smtp_pass']   = ''; 
 $conf['smtp_port']   = 465;
-$conf['smtp_secure'] = 'ssl'; // or 'tls'
+$conf['smtp_secure'] = 'ssl'; 
 
 // ---- Create PDO Connection ----
 try {

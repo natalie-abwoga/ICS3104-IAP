@@ -32,8 +32,8 @@ if (isset($_POST['signin'])) {
                     width: 100%;
                 }
                 .bg {
-                    background: url("icsCbanner.png") no-repeat center center fixed;
-                    background-size: cover; /* make image fit screen */
+                    background: url("icsCbanner.png") 
+                    background-size: cover; 
                     height: 100%;
                     width: 100%;
                     display: flex;
@@ -51,7 +51,7 @@ if (isset($_POST['signin'])) {
                     left: 0;
                     width: 100%;
                     height: 100%;
-                    background: rgba(0,0,0,0.5); /* dark overlay */
+                    background: rgba(0,0,0,0.5); 
                 }
                 .content {
                     position: relative;

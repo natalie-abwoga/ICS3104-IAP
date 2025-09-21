@@ -1,6 +1,6 @@
 <?php
 session_start();
-require 'conf.php'; // your DB connection
+require 'conf.php'; 
 require 'Plugins/PHPMailer/src/PHPMailer.php';
 require 'Plugins/PHPMailer/src/SMTP.php';
 require 'Plugins/PHPMailer/src/Exception.php';
@@ -32,8 +32,8 @@ if (isset($_POST['forgot'])) {
             $mail->isSMTP();
             $mail->Host       = 'smtp.gmail.com';
             $mail->SMTPAuth   = true;
-            $mail->Username   = 'abwoganatalie@gmail.com'; // your Gmail
-            $mail->Password   = 'wicn kliq mvln khge';     // your App Password
+            $mail->Username   = 'abwoganatalie@gmail.com'; 
+            $mail->Password   = '';     
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
             $mail->Port       = 465;
           

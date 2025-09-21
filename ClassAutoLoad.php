@@ -14,7 +14,7 @@ spl_autoload_register(function ($className) use ($directories) {
     }
 });
 
-// create an instance of HelloWorld
+
 $ObjSendMail = new SendMail();
 $ObjForm = new forms();
 $ObjLayout = new layouts();

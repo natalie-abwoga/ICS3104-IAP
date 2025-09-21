@@ -30,12 +30,12 @@ class SendMail {
 
         try {
             // Server settings
-            $mail->SMTPDebug = SMTP::DEBUG_OFF; // 0 in production
+            $mail->SMTPDebug = SMTP::DEBUG_OFF; 
             $mail->isSMTP();
             $mail->Host       = $conf['smtp_host'];
             $mail->SMTPAuth   = true;
-            $mail->Username   = $conf['smtp_user'];   // your Gmail
-            $mail->Password   = $conf['smtp_pass'];       // your App Password
+            $mail->Username   = $conf['smtp_user'];   
+            $mail->Password   = $conf['smtp_pass'];      
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
             $mail->Port       = $conf['smtp_port'];
 
