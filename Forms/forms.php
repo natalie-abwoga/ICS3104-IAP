@@ -20,16 +20,20 @@ class forms {
   </div>
 
   <?php $this->submit_button("Sign Up", "signup"); ?>
-  <a href="signin.php">Already have an account? Log in</a>
+  <div class="mt-3 text-center">
+      <a href="signin.php">Already have an account? Log in</a>
+  </div>
 </form>
 <?php
     }
 
     private function submit_button($value, $name) {
         ?>
-        <button type="submit" class="btn btn-primary" name="<?php echo $name; ?>" value="<?php echo $value; ?>">
-            <?php echo $value; ?>
-        </button>
+        <div class="d-flex justify-content-center mt-3">
+            <button type="submit" class="btn btn-primary" name="<?php echo $name; ?>" value="<?php echo $value; ?>">
+                <?php echo $value; ?>
+            </button>
+        </div>
         <?php
     }
 
@@ -45,15 +49,65 @@ class forms {
   <div class="mb-3">
     <label for="signinPassword" class="form-label">Password</label>
     <input type="password" class="form-control" id="signinPassword" name="password" required>
+    <div class="mt-1">
+        <a href="signin.php?action=forgot">Forgot your password?</a>
+    </div>
   </div>
 
   <?php $this->submit_button("Sign In", "signin"); ?>
-  <a href="signup.php">Don't have an account? Sign up</a>
+  
+  <div class="mt-3 text-center">
+      <a href="signup.php">Don't have an account? Sign up</a>
+  </div>
 </form>
 <?php
     }
+
+    public function forgotPasswordForm() {
+?>
+<h1>Forgot Password</h1>
+<form method="POST" action="forgot_process.php">
+  <div class="mb-3">
+    <label for="forgotEmail" class="form-label">Enter your email</label>
+    <input type="email" class="form-control" id="forgotEmail" name="email" required>
+  </div>
+  <?php $this->submit_button("Send Code", "forgot"); ?>
+</form>
+<?php
+}
+
+public function verifyCodeForm() {
+?>
+<h1>Verify Code</h1>
+<form method="POST" action="verify_code.php">
+  <div class="mb-3">
+    <label for="resetCode" class="form-label">Enter the code sent to your email</label>
+    <input type="text" class="form-control" id="resetCode" name="code" required>
+  </div>
+  <?php $this->submit_button("Verify Code", "verify"); ?>
+</form>
+<?php
+}
+
+public function resetPasswordForm() {
+?>
+<h1>Reset Password</h1>
+<form method="POST" action="reset_password.php">
+  <div class="mb-3">
+    <label for="newPassword" class="form-label">New Password</label>
+    <input type="password" class="form-control" id="newPassword" name="password" required>
+  </div>
+  <?php $this->submit_button("Update Password", "reset"); ?>
+</form>
+<?php
+}
+
+
+
 }
 ?>
+
+
 
 
 
